@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let start = Number(prompt("시작할 숫자를 입력해주세요."));
+        // let finish = Number(prompt("마지막 숫자를 입력해주세요."));
+        // let sum=0;
+        // for(let i=start;i<=finish;i++){
+        //     sum=sum+i;
+        // }
+        // console.log(start+"부터 "+finish+"까지의 합>> "+sum);
+            let num = Math.floor(Math.random()*100)+1;
+            document.write(num);
+        while(true){
+            let ans = Number(prompt("숫자를 입력해주세요!"));
+            if(ans==num){
+                alert("정답입니다. 축하합니다!");
+                break;
+            }else if(ans>num){
+                alert("입력한 숫자보다 작은 수 입니다... ");
+            }else if(ans<num){
+                alert("입력한 숫자보다 큰 수 입니다...");
+            }
+        }
+    </script>
+</body>
+</html>

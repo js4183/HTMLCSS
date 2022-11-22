@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="span1">0</span>
+    <br>
+    <button onclick="plus()">+1증가</button>
+    <!-- <button onclick="plus10()">+10증가</button>
+    <button onclick="plus100()">+100증가</button> -->
+    <button onclick="minus()">-1감소</button>
+    <!-- <button onclick="minus10()">-10감소</button>
+    <button onclick="minus100()">-100감소</button> -->
+    
+    <script>
+        let span1 = document.getElementById('span1');
+        let spanNumber = Number(span1.innerText);
+        // let num =0;
+        function plus(){
+            spanNumber++;
+            span1.innerText = spanNumber;
+            // span1.innerText=++num;
+        }
+        function minus(){
+
+            if(spanNumber>0){
+                spanNumber--;
+                span1.innerText = spanNumber;
+                // span1.innerText=--num;
+            }
+        }
+        // function plus10(){
+        //     num+=10;
+        //     span1.innerText=num;
+        // }
+        // function minus10(){
+        //     if(num>=10){
+        //         num-=10;
+        //         span1.innerText=num;
+        //     }
+        // }
+        // function plus100(){
+        //     num+=100;
+        //     span1.innerText=num;
+        // }
+        // function minus100(){
+        //     if(num>=100){
+        //         num-=100;
+        //         span1.innerText=num;
+        //     }
+        // }
+    </script>
+</body>
+</html>

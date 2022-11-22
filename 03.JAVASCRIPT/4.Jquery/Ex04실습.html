@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>Youtube</title>
+
+</head>
+<body>
+    <div>
+        <button id='like'>좋아요</button><span>0</span>
+        <br>
+        <input type="text"><button class='writeCom'>댓글작성</button>
+        <br>
+        <div id="com">
+            <p>첫댓글<button class='removeCom'>삭제</button></p>
+        </div>
+    </div>
+
+    <script>
+        // $(document).on("click","#like",function(){
+        //     $("#like").text("좋아요 취소");
+        //     $("span").text("1");
+        //     $("#like").addClass("like");
+        // })
+
+        // $(document).on("click",".like",function(){
+        //     $("#like").text("좋아요");
+        //     $("span").text("0");
+        //     $(".like").removeClass("like");
+        // })
+
+        // 좋아요
+        $(document).on("click","#like",function(){
+            let like = Number($("#like+span").text());// 현재 좋아요 개수
+            $("#like+span").text(like+1);//1 더한값을 다시 태그 사이에 텍스트로 설정
+            $(this).text("좋아요 취소");
+            //-> 좋아요버튼(#like) -> 좋아요 취소 버튼(#dislike)
+            $(this).attr("id","dislike");
+        })
+
+        // 좋아요 취소
+        $(document).on("click","#dislike",function(){
+            let like = Number($("#dislike+span").text());// 현재 좋아요 개수
+            $("#dislike+span").text(like-1);//1 뺀 값을 다시 태그 사이에 텍스트로 설정
+            $(this).text("좋아요");
+            $(this).attr("id","like");
+        })
+
+        $(".writeCom").click(function(){
+            let com = $("input[type=text]").val();
+            $("#com").prepend("<p>"+com+"<button class='removeCom'>삭제</button></p>");
+            $("input[type=text]").val("");// 입력창 비우기
+        })
+
+        // $(document).on("click",".writeCom",function(){
+        //     let com = $("input[type=text]").val();
+        //     $("#com").prepend("<p>"+com+"<button class='removeCom'>삭제</button></p>");
+        // })
+
+        // 동적으로 추가된 것에는 적용 X
+        // $(".removeCom").click(function(){
+        //     $("p").remove();
+        // })
+
+        $(document).on("click",".removeCom",function(){
+            // 현재 사용자가 클릭한 버튼 기준(this)
+            $(this).parent().remove();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 기호, 몇줄 출력 (프롬프트 입력) -> 함수 x
+        var pic = prompt("기호를 입력하세요");
+        var num = Number(prompt("몇 줄 출력할지 입력하시오."));
+        // 2. pyramid() 함수 호출
+        // -> 받은 기호, 줄수 -> 피라미드 출력
+        pyramid(pic,num);
+
+        function pyramid(pic,num){//return 사용하지X, void처럼 생각
+            for(let i=1;i<=num;i++){//줄수 개행역할
+                for(let j=1;j<=i;j++){//줄 별로 기호를 출력할 개수
+                    document.write(pic);
+                }
+                document.write("<br>")
+            }
+        }
+    </script>
+</body>
+</html>

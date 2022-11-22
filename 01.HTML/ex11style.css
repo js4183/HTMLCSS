@@ -1,0 +1,16 @@
+.s{
+    background-color: gray;
+    height: 50px;
+    
+}
+.g{
+    background-color: whitesmoke;
+    height: 35px;
+}
+.r{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 8px;
+}

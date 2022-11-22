@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let js = Number(prompt("Java점수를 입력하세요."));
+        let as = Number(prompt("Android점수를 입력하세요."));
+        let ws = Number(prompt("Web점수를 입력하세요."));
+        
+        let total = js+as+ws;
+        let avg = (total/3).toFixed(2);
+        let grade;
+        if(avg>=90){
+            grade = 'A';
+        }else if(avg>=80){
+            grade = 'B';
+        }else if(avg>=70){
+            grade = 'C';
+        }else{
+            grade = 'F';
+        }
+        console.log("당신의 평균은 "+avg+"이고 "+grade+"입니다.");
+    </script>
+</body>
+</html>
